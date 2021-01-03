@@ -1,0 +1,36 @@
+.ng-terminal {
+  display: block;
+  height: 50vh;
+}
+
+.graySmallWidthText {
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+}
+
+
+.buttonStile {
+  /*padding: 13px 17px;*/
+  /*color: #fff;*/
+  /*background: #65BFC8;*/
+  /*-moz-border-radius: 10px;*/
+  /*-webkit-border-radius: 10px;*/
+  /*border-radius:10px;*/
+  margin-right: 5%;
+  margin-left: 5%;
+  /*width : 100px;*/
+  margin-left: 85%;
+
+}
+
+.board {
+  /*border: 1px solid gray;*/
+  width: 600px;
+  margin-left: 5%;
+}
+
+a:visited {
+  color: #fff;
+}

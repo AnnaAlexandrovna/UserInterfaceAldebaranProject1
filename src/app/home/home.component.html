@@ -1,0 +1,166 @@
+<!--<button mat-button (click)="openDialog()">Open dialog</button>-->
+<br>
+<!--<a>tok - {{this.tok}}</a>-->
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/resource/1.PNG" alt="Random first slide" style="width:87%;" vspace="3" hspace="91">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/resource/2.PNG" alt="Random second slide" style="width:87%;" vspace="3" hspace="91">
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/resource/3.PNG" alt="Random third slide" style="width:87%;" vspace="3" hspace="91">
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<br>
+
+<div align="center" class="blueBigText">
+  <p><i>Возможности проекта</i></p>
+</div>
+
+<div align="center" class="grayBigText">
+  <p>Aldebaran предлагает Вам набор сценариев по наиболее популярным технологиям, в каждом из которых представлены
+    уникальные интерактивные сценарии с заранее подготовленной интегрированной средой.
+  </p>
+</div>
+
+<table width="100%" class="ml123" align="center">
+  <tr>
+    <td>
+      <img src="assets/resource/home1.PNG" width="550" height="400"
+           alt="Learning opportunities">
+    </td>
+    <td>
+
+      <div>
+        <a routerLink="/allcourse" routerLinkActive="active">
+          <div class="blueSmallText"><i> Проходите сценарии</i></div>
+        </a>
+        <br>
+        <div class="graySmallText"> На платфореме существует множество различных сценариев по актуальным направлениям
+        </div>
+        <br>
+        <a routerLink="/createcourse" routerLinkActive="active">
+          <div class="blueSmallText"><i> Создавайте сценарии</i></div>
+        </a>
+        <br>
+        <div class="graySmallText"> Каждый участник может создавать собственные сценарии по различным категориям
+          технологий
+        </div>
+        <br>
+        <p *ngIf="this.tok.length==0"><a routerLink="/secured" routerLinkActive="active">
+          <div class="blueSmallText"><i> Отслеживайте прогресс</i></div>
+        </a></p>
+        <p *ngIf="this.tok.length!=0"><a routerLink="/userprofile" routerLinkActive="active">
+          <div class="blueSmallText"><i> Отслеживайте прогресс</i></div>
+        </a></p>
+
+        <br>
+        <div class="graySmallText"> После прохождения курса, он заносится Ваш профиль,
+          что позволяет вам отслеживать своей прогресс и ставить дальнейшие цели.
+          <p *ngIf="this.tok.length==0">Вы можете <a routerLink="/secured" style="color: #000000;"
+                                                                        routerLinkActive="active">войти в систему</a>
+            чтобы профиль стал доступен </p>
+          <p *ngIf="this.tok.length!=0">Вы можете посмотреть <a routerLink="/userprofile"
+                                                                                   routerLinkActive="active">Ваш
+            профиль</a></p>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br>
+<div align="center" class="blueBigText" margin-top="10%">
+  <p><i> Наши приемущества</i></p>
+</div>
+<div align="center" class="grayBigText">
+  <p>Aldebaran хоть и является стартапом, но обладает многочисленными приемуществами,
+    которые делаю его одним из наиболее конкурентно способных проектов.
+  </p>
+</div>
+
+<table width="100%" class="ml123" align="center">
+  <tr>
+    <td><img src="assets/resource/home21.jpg" width="400" height="400"
+             alt="Our advantages" align="left" vspace="10" hspace="50"></td>
+    <td>
+      <div class="blueSmallText"><i>Поддержка русского языка </i></div>
+      <br>
+      <div class="graySmallText"> Основным языком платформы является русский язык.
+        Это делает процесс обучения более комфортным для русскоязычных пользователей,
+        так как нет необходимости тратить время на перевод инструкций
+      </div>
+      <br>
+      <div class="blueSmallText"><i>Все курсы являются бесплатными </i></div>
+      <br>
+      <div class="graySmallText"> Aldebaran является открытой платформой. Вам не нужно платить за прохождение курсов,
+        так как весь материал является и бесплатным
+      </div>
+      <br>
+      <div class="blueSmallText"><i> Возможность оставлять обратную связь</i></div>
+      <br>
+      <div class="graySmallText"> После прохождения сценария каждый пользователь может оставить обратную связь о нем.
+        Это позволяет разработчикам улучшать материал, а пользователям иметь представление о курсе до его прохождения
+      </div>
+    </td>
+
+
+  </tr>
+</table>
+
+<br>
+
+<div align="center" class="blueBigText" margin-top="10%">
+  <p><i>Наши сценарии </i></p>
+</div>
+
+<div align="center" class="grayBigText">
+  <p>Aldebaran предлагает Вам набор готовых сценариев по большеству популятрных направлений,
+    кроме того набор сценариев постоянно увеличивается,
+    так как у каждого участника платформы существует возможность добавлять собственные сценарии.
+  </p>
+</div>
+<!--<p>{{this.tok.length}}</p>-->
+<table width="100%" *ngIf="this.tok.length!=0">
+  <tr>
+    <td>
+      <div class="wrapper" *ngIf="this.tok.length!=0">
+        <div class="container"  *ngFor="let course of courses1; index as i">
+          <img src="assets/resource/sticker1.jpg" alt="Sticker"
+               style="width:100%;" >
+          <div class="text-block">
+            <a  *ngIf="this.tok.length!=0" routerLink="/excourse/{{ course.idOfCourse}}"
+               style="color: black; text-decoration: underline;">{{ course.nameOfCourse }}</a>
+<!--            <a  *ngIf="this.tok.length==0" routerLink="/secured"-->
+<!--                style="color: black; text-decoration: underline;">{{ course.nameOfCourse }}</a>-->
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
+<div align="center" class="grayBigText" *ngIf="this.tok.length==0" >
+  <p align="center" >Раздел доступен для просмотра только авторизованным пользователям</p>
+  <a  *ngIf="this.tok.length==0" routerLink="/secured"
+      style="color: black; text-decoration: underline;">Нажмите сюда для входа</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="assets/resource/logo.jpg" width="205" height="" alt="Logo"
+     align="left">
+<div class="graySmallText" align="center">Контакты:</div>
+<div class="graySmallText" align="center">email : mail@mail.ru</div>
+

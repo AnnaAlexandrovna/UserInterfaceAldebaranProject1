@@ -1,0 +1,53 @@
+<!--<button mat-button (click)="openDialog()">Open dialog</button>-->
+<br>
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0">Изменение курса</h5>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <ngb-alert [dismissible]="false" *ngIf="this.tok.length==0">
+        <strong>Важно!</strong> Изменять курсы могут только авторизование пользователи. Пожалуйста,<a
+        routerLink="/secured" routerLinkActive="active" style="color: saddlebrown; text-decoration: underline;"> войдите в
+        систему</a>
+      </ngb-alert>
+      <img src="assets/resource/changecourse.jpg" alt="Question" width="30%"
+           align="left" vspace="10" hspace="50">
+
+      <div class="grayBigText">
+        <p>Если Вы являетесь владельцем курса, то у Вас есть возможность изменить данный курс, для этого заполните
+          сведения
+          ниже:</p>
+        <form class="example-form">
+<!--          <mat-form-field class="example-full-width">-->
+<!--            <mat-label>Id курса</mat-label>-->
+<!--            <input matInput required placeholder="" value="{{this.id1234}}" [(ngModel)]="idOfCourse" name="idOfCourse">-->
+<!--          </mat-form-field>-->
+<!--          <br>-->
+          <mat-form-field class="example-full-width">
+            <mat-label>Ссылка на репозиторий с изменениями</mat-label>
+            <input matInput required placeholder="" value="" [(ngModel)]="link" name="link">
+          </mat-form-field>
+          <br>
+        </form>
+      </div>
+      <mat-list>
+        <mat-list-item *ngIf="this.tok.length==0">
+          <button mat-button disabled>Изменить курс</button>
+        </mat-list-item>
+        <mat-list-item *ngIf="this.tok.length!=0">
+          <button mat-button (click)="postChangeCourse()">Изменить курс</button>
+        </mat-list-item>
+      </mat-list>
+
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<!--<p *ngIf="stat.status">Status of request : {{stat.status}}</p>-->
+<!--<p>link - {{this.link}}</p>-->
+<!--<button mat-button (click)="openStartChangeDialog()">Start change popup</button>-->
+<!--<button mat-button (click)="openFailDialog()">Fail popup</button>-->
+<!--<button mat-button (click)="openOkDialog()">Success popup</button>-->
+<!--<button mat-button (click)="openDialog()">Wait popup</button>-->

@@ -1,0 +1,67 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.blueBigText {
+  font-size: 25px;
+  background: #FFF;
+  color: #396EA5;
+  font-family: Calibri Light;
+}
+
+.grayBigText {
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.centerLocation {
+  text-align: center;
+}
+
+.buttonStile {
+  padding: 13px 17px;
+  color: #fff;
+  background: #65BFC8;
+  text-decoration: underline;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-right: 5%;
+  margin-left: 45%;
+  width: 600px;
+}
+
+.board {
+  border: 1px solid gray;
+  margin-left: 45%;
+}
+
+a:visited {
+  color: #fff;
+
+}
+
+.container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  /*font-weight: 800;*/
+  font-size: 50px;
+  color: #FFFFFF;
+}

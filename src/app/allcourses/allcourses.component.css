@@ -1,0 +1,74 @@
+.example-full-width {
+  width: 60%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blueBigText {
+  font-size: 25px;
+  background: #FFF;
+  color: #396EA5;
+  font-family: Calibri Light;
+}
+
+.graySmallText {
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.bigWidth {
+  width: 800px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.graySmallWidthText {
+  width: 300px;
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+}
+
+.graySmallWidthUnderText {
+  width: 300px;
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+  text-decoration: underline;
+}
+
+.buttonStile {
+  padding: 13px 17px;
+  color: #fff;
+  background: #65BFC8;
+  text-decoration: underline;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: #396EA5;
+}

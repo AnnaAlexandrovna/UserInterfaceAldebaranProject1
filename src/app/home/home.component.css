@@ -1,0 +1,71 @@
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blueBigText {
+  font-size: 28px;
+  background: #FFF;
+  font-family: Calibri Light;
+}
+
+.grayBigText {
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  font-family: Calibri Light;
+  /*float: left; !* Выравнивание по левому краю *!*/
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.blueSmallText {
+  font-size: 20px;
+  background: #FFF;
+  color: #000000;
+  text-decoration: underline;
+  font-family: Calibri Light;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.graySmallText {
+  font-family: Calibri Light;
+  font-size: 20px;
+  background: #FFF;
+  color: #666666;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  color: #000000;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: #000000;
+}
+
+.ml123 {
+  margin-right: 5%;
+  margin-left: 5%;
+}

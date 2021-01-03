@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Пожалуйста, подождите...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button mat-button (click)="onNoClick()" align="left">X</button></h1>
+<div mat-dialog-content>
+  <mat-spinner diameter="100" mode="indeterminate" style="
+  /*margin:0 auto; */
+  position: absolute;
+    top: 48%;
+    left: 46%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);"></mat-spinner>
+</div>
+

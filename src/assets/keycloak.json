@@ -1,0 +1,10 @@
+{
+  "realm": "aldebaran",
+  "auth-server-url": "http://31.184.255.92:8080/auth",
+  "ssl-required": "none",
+  "resource": "frontend",
+  "credentials": {
+    "secret": "2dbd4ed5-6695-4b13-a187-cdb486ca37be"
+  },
+  "confidential-port": 0
+}

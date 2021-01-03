@@ -1,0 +1,47 @@
+<!--<button mat-button (click)="openDialog()">Open dialog</button>-->
+<br>
+
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0">Наши контакты</h5>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+
+
+      <img src="assets/resource/contact.jpg" alt="Question"
+           align="left" vspace="10" hspace="50">
+      <div>
+
+        <br>
+        <div class="grayBigText"> Если у вас возникли вопросы по работе портала, регистрации, созданию курсов или другие
+          организационно-технические вопросы, пожалуйста, свяжитесь с нами.
+        </div>
+        <br>
+        <div class="grayBigText"><strong>Наша почта: mail@mail.ru</strong></div>
+        <br>
+        <div class="grayBigText">
+          Все обращения, поступившие на почту, будут рассмотрены в течение 5 рабочих дней.
+        </div>
+
+      </div>
+      <br>
+      <mat-list>
+        <mat-list-item>
+          <button mat-button (click)='goHome()'>На главную</button>
+        </mat-list-item>
+        <mat-divider *ngIf="this.tok.length!=0"></mat-divider>
+        <mat-list-item *ngIf="this.tok.length!=0">
+          <button mat-button *ngIf="this.tok.length!=0" (click)='goUserProfile()'>Мой профиль
+          </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <button mat-button (click)='goToAllCourses()'>Все курсы</button>
+        </mat-list-item>
+      </mat-list>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

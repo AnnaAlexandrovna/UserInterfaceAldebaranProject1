@@ -1,0 +1,48 @@
+<br>
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0">{{ course1.nameOfCourse }} </h5>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <div>
+        <table margin-left="10%" width="90%" cellspacing="0" cellpadding="4">
+          <tr>
+            <td>
+              <div class="container">
+                <img src="assets/resource/ex.jpg" alt="Sticker"
+                     style="width:100%;">
+                <div class="text-block">
+                  <strong><p style="color: #FFFA52  ;">{{course1.category }}</p></strong>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <markdown class="variable-binding" [data]="markdown"></markdown>
+              <mat-list>
+                <mat-list-item>
+                  <button mat-button (click)='getInfoAboutCourse()'>Начать курс</button>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <button mat-button (click)='goToChangeCourse()'>Изменить курс</button>
+                </mat-list-item>
+              </mat-list>
+
+        </table>
+      </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<br>
+<br>
+<br>
+
+<img src="assets/resource/ex1.jpg" alt="Sticker"
+     style="width:100%;">
+
+
+

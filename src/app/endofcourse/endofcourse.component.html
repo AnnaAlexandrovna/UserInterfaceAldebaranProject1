@@ -1,0 +1,46 @@
+<br>
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0">Завершение сценария {{name1.nameOfCourse}} </h5>
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      <table width="100%">
+        <tr>
+          <td>
+            <img src="assets/resource/finish.png" width="290" height="290"
+                 alt="Congratulation" align="left" vspace="10" hspace="50">
+          </td>
+          <td>
+            <mat-list>
+              <mat-list-item> Поздравляем, Вы успешно закончили данный курс!
+                Так держать!
+                Но у нас всегда есть что-то новенькое...
+                Вы можете пройти новый курс, создать свой курс, а так же оставить отзыв на этот курс.
+              </mat-list-item>
+              <br>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <button mat-button (click)='goToAllCourses()'>Все разделы</button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <button mat-button (click)='goHome()'>На главную</button>
+              </mat-list-item>
+              <mat-divider *ngIf="this.tok.length!=0"></mat-divider>
+              <mat-list-item>
+                <button mat-button *ngIf="this.tok.length!=0" (click)="goUserProfile()">Мой профиль
+                </button>
+              </mat-list-item>
+            </mat-list>
+          </td>
+        </tr>
+      </table>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<br>
+<br>
+<br>

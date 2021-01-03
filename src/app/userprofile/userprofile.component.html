@@ -1,0 +1,64 @@
+<br>
+<ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+  <ngb-panel id="custom-panel-1">
+    <ng-template ngbPanelHeader let-opened="opened">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 class="m-0" *ngIf="!this.name">Добро пожаловать!</h5>
+        <h5 *ngIf="this.name">Добро пожаловать, {{this.name}} !</h5>
+
+      </div>
+    </ng-template>
+    <ng-template ngbPanelContent>
+
+      <img src="assets/resource/userprofile.png" width="332" height="350" alt="User profile"
+           align="left" vspace="10" hspace="50">
+      <div>
+
+        <br>
+
+        <div class="graySmallText"> Вы можете:</div>
+        <br>
+<!--        <a>{{this.tok}}</a>-->
+        <a routerLink="/allcourse" class="graySmallText">- пройти курс</a>
+
+<!--        <br>-->
+<!--        <a routerLink="/changepass" class="graySmallText">- изменить пароль</a>-->
+<!--        <br>-->
+<!--        <a routerLink="/changeinfo" class="graySmallText">- изменить личные данные</a>-->
+<!--        <br>-->
+<!--        <a routerLink="/allcourse" class="graySmallText">- просмотреть список пройденных курсов</a>-->
+<!--        <br>-->
+<!--        <a routerLink="/allcourse" class="graySmallText">- просмотреть список созданных курсов</a>-->
+        <br>
+        <a routerLink="/newcoure" class="graySmallText">- создать курс</a>
+        <br>
+        <a (click)="getKeycloakService().logout()" class="graySmallText">- выйти из системы</a>
+        <br>
+        <br>
+        <br>
+        <div class="graySmallText"> Для этого нажмите на нужную строку выше!</div>
+      </div>
+      <br>
+      <p class="graySmallText">Тут отображаются все курсы, автором которых вы явяетесь:</p>
+      <p class="graySmallText" *ngIf="this.courses1.length===0">На данный момент, вы еще не создали свои курсы. Все еще впереди!</p>
+      <div class="wrapper">
+        <div class="container" *ngFor="let course of courses1; index as i">
+          <img src="assets/resource/sticker1.jpg" alt="Sticker"
+               style="width:100%;">
+          <div class="text-block">
+            <a  *ngIf="this.tok.length!=0" routerLink="/excourse/{{ course.idOfCourse}}"
+                style="color: black; text-decoration: underline;">{{ course.nameOfCourse }}</a>
+            <a  *ngIf="this.tok.length==0" routerLink="/secured"
+                style="color: black; text-decoration: underline;">{{ course.nameOfCourse }}</a>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+<br>
+<br>
+<br>
+
+

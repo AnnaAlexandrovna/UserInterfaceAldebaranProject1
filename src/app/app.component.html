@@ -1,0 +1,44 @@
+<div class="topnav" *ngIf="this.tok1.length!=0">
+<!--  <p *ngIf="this.name">{{this.name}}</p>-->
+
+  <img src="assets/resource/logo.jpg" width="205" height="" alt="logo" align="right">
+  <br>
+  <button mat-button [matMenuTriggerFor]="menu"><h3>Menu</h3></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goHome()">Главная</button>
+    <button mat-menu-item (click)="goContact()">Контакты</button>
+<!--    <button mat-menu-item (click)="goChange()"> Изменение сценария</button>-->
+    <button mat-menu-item (click)="goCreate()"> Создание сценария</button>
+    <button mat-menu-item (click)="goToAllCourses()"> Все сценарии</button>
+    <button mat-menu-item (click)="goUserProfile()">Профиль пользователя</button>
+    <button mat-menu-item (click)="getKeycloakService().logout()">Выйти</button>
+  </mat-menu>
+  <br>
+
+  <router-outlet></router-outlet>
+</div>
+
+<div class="topnav" *ngIf="this.tok1.length==0">
+
+  <img src="assets/resource/logo.jpg" width="205" height="" alt="logo" align="right">
+  <br>
+  <button mat-button [matMenuTriggerFor]="menu"><h3>Menu</h3></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goHome()">Главная</button>
+    <button mat-menu-item (click)="goContact()">Контакты</button>
+<!--    <button mat-menu-item (click)="goChange()"> Изменение сценария</button>-->
+    <button mat-menu-item (click)="goCreate()"> Создание сценария</button>
+    <button mat-menu-item (click)="goToAllCourses()"> Все сценарии</button>
+    <button mat-menu-item (click)="goLogin()">Вход</button>
+  </mat-menu>
+  <br>
+
+  <router-outlet></router-outlet>
+</div>
+
+
+<!--<button mat-button [matMenuTriggerFor]="menu">Menu</button>-->
+<!--<mat-menu #menu="matMenu">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
